@@ -1,0 +1,149 @@
+.form-publication {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px $grey2;
+  padding: 20px 30px;
+
+  background-color: rgba($grey2, 0.5);
+
+  legend {
+    text-align: center;
+    color: $grey3;
+
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+
+  #message,
+  #url,
+  .media-label {
+    margin-top: 10px;
+    background-color: $grey3;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #dee2e6;
+    outline: none;
+
+    &:focus {
+      background-color: rgba($grey3, 0.8);
+    }
+    &:active {
+      background-color: rgba($grey3, 0.8);
+    }
+
+    &::placeholder {
+      color: $white2;
+    }
+  }
+
+  .medias {
+    display: flex;
+    justify-content: center;
+    .media-label {
+      cursor: pointer;
+
+      color: $white2;
+      width: 100%;
+    }
+
+    #url {
+      width: 100%;
+      &::placeholder {
+        color: $white2;
+        text-align: center;
+      }
+    }
+
+    #file {
+      display: none;
+    }
+  }
+
+  .picture,
+  .video {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: $black2;
+    text-align: center;
+  }
+
+  .space {
+    width: 50px;
+  }
+
+  .render-post {
+    margin-top: 50px;
+    background-color: $white3;
+    padding: 15px 10px;
+    .user {
+      display: flex;
+      align-items: center;
+
+      .render-user-img {
+        border-radius: 20px;
+        object-fit: cover;
+        width: 5rem;
+        height: 5rem;
+        margin-right: 15px;
+      }
+    }
+    .message-post {
+      margin: 10px 0;
+    }
+
+    .render-post-media {
+      margin-top: 20px;
+      width: 100%;
+
+      &.video-post {
+        height: 480px;
+      }
+    }
+  }
+
+  .btns-post {
+    align-self: flex-end;
+    .send-post,
+    .cancel-post {
+      border-radius: 10px;
+      padding: 10px 20px;
+      color: #ffffff;
+      background-color: $third1;
+    }
+    .send-post {
+      margin: 20px 0;
+    }
+
+    .cancel-post {
+      margin: 20px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form-publication {
+    padding: 10px 5px;
+
+    .space {
+      width: 10px;
+    }
+
+    #message,
+    #url,
+    .media-label {
+      margin-top: 10px;
+
+      padding: 10px 5px;
+      white-space: nowrap;
+    }
+  }
+
+  .render-post .user img.render-user-img {
+    width: 50px;
+    height: 50px;
+  }
+}

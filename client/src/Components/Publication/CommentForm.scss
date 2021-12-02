@@ -1,0 +1,29 @@
+.message-comment {
+  position: relative;
+  margin-top: 10px;
+  input {
+    background-color: transparent;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid $first1;
+    padding: 4px 30px;
+    color: $first3;
+
+    &:focus {
+      border: 2px solid $first3;
+      outline: none;
+      background-color: $white3;
+    }
+
+    &::placeholder {
+      color: $grey2;
+    }
+  }
+  button {
+    position: absolute;
+    top: 5px;
+    right: 12px;
+
+    color: $grey3;
+  }
+}

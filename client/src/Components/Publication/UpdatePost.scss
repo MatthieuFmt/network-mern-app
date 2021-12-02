@@ -1,0 +1,54 @@
+.update-post {
+  @extend %flexBetween;
+  margin-bottom: 15px;
+
+  .form-update {
+    width: 80%;
+  }
+  textarea {
+    width: 100%;
+    border-radius: 4px;
+    padding: 5px;
+    border: 2px solid $first1;
+    resize: none;
+    min-height: 90px;
+
+    &:focus {
+      border: 2px solid $first2;
+      outline: none;
+    }
+  }
+  .update-btn {
+    background-color: transparent;
+    color: $first2;
+    height: 40px;
+
+    i {
+      font-size: 30px;
+      transition: font-size 0.2s;
+
+      &:hover {
+        font-size: 35px;
+      }
+    }
+  }
+  .btns-edit-delete {
+    align-self: flex-start;
+
+    .edit {
+      color: $first2;
+      margin-right: 20px;
+    }
+
+    .delete {
+      color: $third1;
+    }
+    button {
+      background-color: transparent;
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

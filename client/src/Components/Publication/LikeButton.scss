@@ -1,0 +1,11 @@
+.unlike {
+  color: $third1;
+  transition: transform 0.2s;
+  &:active {
+    transform: scale(1.5);
+  }
+}
+
+.like {
+  color: $first2;
+}

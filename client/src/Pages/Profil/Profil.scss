@@ -1,0 +1,296 @@
+.profil-container {
+  display: flex;
+  position: relative;
+  padding: 100px 0 0;
+  min-height: 100vh;
+
+  .user {
+    width: 40%;
+    height: fit-content;
+    color: $grey3;
+    position: sticky;
+    top: 90px;
+    box-shadow: 0 0 5px $grey2;
+
+    margin: 0 20px 10px 0;
+
+    .user-profil {
+      text-align: center;
+      position: relative;
+
+      h2 {
+        margin-bottom: 20px;
+      }
+      img {
+        width: 370px;
+        height: 370px;
+        object-fit: cover;
+      }
+    }
+
+    .errors {
+      color: $third3;
+      font-size: 0.9rem;
+    }
+
+    .user-bio {
+      display: flex;
+      flex-direction: column;
+
+      padding: 20px 30px;
+
+      label {
+        margin: 10px 0;
+        width: fit-content;
+      }
+
+      textarea {
+        min-width: 150px;
+
+        border-radius: 4px;
+        padding: 5px;
+        border: 2px solid $first1;
+        min-height: 200px;
+
+        resize: none;
+
+        &:focus {
+          border: 2px solid $first2;
+          outline: none;
+        }
+      }
+
+      button {
+        background-color: $third1;
+        color: $white1;
+        padding: 5px;
+        width: fit-content;
+        border-radius: 5px;
+      }
+
+      p {
+        height: fit-content;
+        cursor: pointer;
+        padding: 5px;
+        transition: background 0.2s;
+        max-width: 280px;
+        word-wrap: break-word;
+
+        &:hover {
+          background-color: $grey1;
+        }
+      }
+    }
+
+    .follows {
+      padding: 20px 30px;
+
+      .followers,
+      .following {
+        cursor: pointer;
+        &:hover {
+          color: $third1;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    background-color: rgba(#000000, 0.7);
+    z-index: 100;
+
+    .follows-popup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $white3;
+      min-width: 280px;
+      width: 30%;
+      padding: 10px 15px;
+      border-radius: 5px;
+      max-height: 515px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        background-color: $grey3;
+        width: 3px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $grey2;
+        border-radius: 5px;
+      }
+
+      li {
+        @extend %flexBetween;
+        border-bottom: 1px solid $grey2;
+        margin-top: 15px;
+        padding-bottom: 15px;
+
+        .users {
+          @extend %flexBetween;
+          img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50px;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+  .follows {
+    .followers,
+    .following {
+      margin: 10px 0;
+    }
+  }
+
+  .content {
+    margin-top: 50px;
+    width: 70%;
+    height: fit-content;
+    color: $first3;
+
+    .name-date {
+      @extend %flexBetween;
+
+      span {
+        font-size: 0.8rem;
+      }
+    }
+
+    .container-publication {
+      margin: 50px 0;
+
+      .post-card {
+        margin-bottom: 30px;
+        box-shadow: 0 0 5px $grey2;
+        padding: 20px 10px;
+
+        .post-message {
+          margin-bottom: 10px;
+        }
+
+        img,
+        iframe {
+          box-shadow: 0 0 5px $grey1;
+          width: 100%;
+        }
+
+        iframe {
+          height: 300px;
+        }
+
+        ul .commenters {
+          margin-top: 20px;
+          @extend %flexBetween;
+
+          .comment-time {
+            .commenter-text {
+              background-color: $first1;
+              width: fit-content;
+              padding: 5px 10px;
+              border-radius: 50px;
+            }
+            .timestamp {
+              font-size: 0.8rem;
+            }
+          }
+        }
+
+        .opinions {
+          @extend %flexBetween;
+          margin-top: 20px;
+          color: $first2;
+
+          .likes i {
+            color: $third1;
+          }
+          .comments i {
+            color: $first1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .profil-container {
+    display: flex;
+    flex-direction: column;
+
+    .user {
+      width: 100%;
+      position: static;
+      display: flex;
+      margin-top: 20px;
+
+      .user-profil {
+        width: 33%;
+
+        img {
+          width: 100%;
+          max-height: 250px;
+        }
+      }
+
+      .profil-bottom {
+        display: flex;
+        flex-direction: column;
+        width: 66%;
+        justify-content: space-around;
+
+        .user-bio {
+          padding: 5px 15px;
+          position: relative;
+
+          .update-bio {
+            position: absolute;
+            top: 10px;
+            right: 0;
+          }
+        }
+
+        .follows {
+          padding: 5px 15px;
+
+          .followers,
+          .following {
+            margin: 5px 0;
+          }
+        }
+      }
+    }
+
+    .content {
+      width: 100%;
+
+      .name-date {
+        @extend %flexBetween;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .profil-container {
+    .update-post {
+      .btns-edit-delete {
+        white-space: nowrap;
+        width: auto;
+      }
+    }
+  }
+}

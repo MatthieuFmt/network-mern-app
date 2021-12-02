@@ -1,0 +1,72 @@
+@import "./_variables";
+@import "./_placeholders";
+@import "../Pages/Register/Register.scss";
+@import "../Pages/Home/Home.scss";
+@import "../Pages/Home/PostForm.scss";
+@import "../Pages/Profil/Profil.scss";
+@import "../Pages/Profil/UploadImg.scss";
+@import "../Pages/Profil/FollowHandler.scss";
+@import "../Components/Navbar/Navbar.scss";
+@import "../Components/Publication/Comments.scss";
+@import "../Components/Publication/EditDeleteComment.scss";
+@import "../Components/Publication/CommentForm.scss";
+@import "../Components/Publication/UpdatePost.scss";
+@import "../Components/Publication/LikeButton.scss";
+@import "../Components/Publication/FriendProfil.scss";
+@import "../Components/Publication/Publication.scss";
+@import "../Components/Friend/Friend.scss";
+
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Fira Sans", sans-serif;
+  font-size: clamp(14px, 1.5vmax, 20px);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+
+  &::selection {
+    color: $third1;
+    background-color: $grey1;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 300px;
+  width: 95%;
+  max-width: 950px;
+  margin: 0 auto;
+}

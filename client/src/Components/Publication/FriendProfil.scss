@@ -1,0 +1,85 @@
+.friend-profil-container {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(#000000, 0.7);
+  z-index: 10;
+  @extend %flexCenter;
+
+  .friend-content {
+    min-width: 300px;
+    width: 50%;
+    height: fit-content;
+    background-color: $white2;
+    border-radius: 5px;
+    color: $black1;
+    overflow: hidden;
+
+    .user-img-pseudo {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .user-img {
+        width: 12rem;
+        height: 12rem;
+      }
+
+      .user-pseudo {
+        margin: auto;
+        display: flex;
+      }
+
+      .user-registration {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: fit-content;
+      }
+    }
+
+    .user-bio {
+      max-height: 350px;
+      overflow: auto;
+    }
+
+    .user-bio,
+    .user-follows {
+      display: flex;
+      padding: 20px 30px;
+    }
+
+    .user-followers {
+      margin-right: 20px;
+      color: $third1;
+    }
+    .user-following {
+      color: $third1;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .friend-profil-container {
+    .friend-content {
+      .user-img-pseudo {
+        flex-direction: column;
+
+        .user-img {
+          width: 100%;
+          height: fit-content;
+        }
+
+        .user-pseudo {
+          padding-top: 15px;
+        }
+
+        .user-registration {
+          top: 0;
+          background-color: rgba($color: $grey1, $alpha: 0.6);
+          padding: 1px 2px;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}

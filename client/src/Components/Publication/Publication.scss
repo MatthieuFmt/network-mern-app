@@ -1,0 +1,110 @@
+article {
+  position: relative;
+  border-radius: 5px;
+  margin: 50px 0;
+  padding: 50px 35px;
+  box-shadow: 0 0 5px $grey2;
+
+  button {
+    background-color: transparent;
+  }
+
+  .user-info {
+    @extend %flexBetween;
+    margin-bottom: 20px;
+
+    .show-user {
+      display: flex;
+      align-items: center;
+      color: $black1;
+      h3 {
+        margin: 0 10px 0 15px;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+      }
+      .img-user img {
+        border-radius: 20px;
+        object-fit: cover;
+        width: 90px;
+        height: 90px;
+      }
+    }
+    span {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      color: $grey2;
+    }
+  }
+
+  .description {
+    margin: 10px 0;
+  }
+
+  .media {
+    img,
+    iframe {
+      width: 100%;
+      object-fit: contain;
+    }
+    iframe {
+      height: 450px;
+    }
+  }
+}
+
+.loadings {
+  .loading {
+    border-radius: 4px;
+    height: 20px;
+    animation: loader 2s alternate infinite;
+  }
+  .user-loading {
+    display: flex;
+    align-items: center;
+    .user-picture-loading {
+      height: 90px;
+      width: 90px;
+      border-radius: 30px;
+      margin-right: 20px;
+    }
+
+    .user-name-loading,
+    .date-loading {
+      width: 150px;
+    }
+
+    .date-loading {
+      margin-left: auto;
+    }
+  }
+  .description-loading {
+    margin: 20px 0 30px;
+  }
+
+  .media-loading {
+    height: 400px;
+  }
+
+  .message-loading {
+    margin-top: 30px;
+  }
+}
+
+@keyframes loader {
+  0% {
+    background: $grey1;
+  }
+
+  100% {
+    background: $grey2;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  article {
+    padding: 20px 15px;
+    margin: 25px 0;
+  }
+}

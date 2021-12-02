@@ -1,0 +1,32 @@
+.follow-unfollow {
+  align-self: center;
+
+  .follow,
+  .unfollow {
+    background-color: transparent;
+    margin-top: 5px;
+    i {
+      font-size: 30px;
+    }
+  }
+  .unfollow {
+    color: $third2;
+  }
+
+  .follow {
+    color: $first3;
+  }
+
+  .follow-card,
+  .unfollow-card {
+    color: $first3;
+
+    i {
+      font-size: 25px;
+    }
+  }
+  // i {
+  //   color: $first3;
+  //   font-size: 35px;
+  // }
+}

@@ -1,0 +1,72 @@
+.container-comments {
+  .opinions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .likes {
+      display: flex;
+      margin: 10px 0;
+
+      button {
+        margin: 0 10px 0 0;
+      }
+    }
+
+    .toggle-comment {
+      color: $first3;
+      i {
+        transition: transform 0.2s;
+      }
+      &:active i {
+        transform: scale(1.5);
+      }
+    }
+  }
+  .text-comment {
+    @extend %flexBetween;
+    position: relative;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: $white3;
+    border-radius: 10px;
+
+    &.my-comment {
+      background-color: $first1;
+    }
+    .commenters {
+      @extend %flexBetween;
+      flex-direction: column;
+      width: 20%;
+
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+      .commenter-pseudo {
+        color: $black1;
+      }
+    }
+
+    .commenter-text {
+      color: $first3;
+      margin-left: 20px;
+      font-size: 0.95rem;
+      width: 80%;
+    }
+
+    .comment-date {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+
+      font-size: 0.7rem;
+      color: $grey3;
+    }
+  }
+}
