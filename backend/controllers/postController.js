@@ -44,7 +44,7 @@ export const createPost = async (req, res) => {
 
     await pipeline(
       req.file.stream,
-      fs.createWriteStream(`${__dirname}/../client/build/uploads/${fileName}`)
+      fs.createWriteStream(`./client/build/uploads/${fileName}`)
     );
   }
 
