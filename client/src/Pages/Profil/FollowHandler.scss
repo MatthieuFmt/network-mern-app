@@ -20,13 +20,9 @@
   .follow-card,
   .unfollow-card {
     color: $first3;
-
+    background: transparent;
     i {
       font-size: 25px;
     }
   }
-  // i {
-  //   color: $first3;
-  //   font-size: 35px;
-  // }
 }

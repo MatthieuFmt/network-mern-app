@@ -12,7 +12,6 @@ export default function errorReducer(state = initialState, action) {
       };
 
     case GET_USER_ERRORS:
-      console.log(state);
       return {
         usersErrors: action.payload,
         postsErrors: [],
