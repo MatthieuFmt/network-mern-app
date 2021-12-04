@@ -6,7 +6,7 @@ import background from "./background.svg";
 
 const Home = () => {
   // toggle forms
-  const [log, setLog] = useState({ sign: true, connect: false });
+  const [log, setLog] = useState({ sign: false, connect: true });
 
   const toggleRegister = (command) => {
     if (command === "sign") {

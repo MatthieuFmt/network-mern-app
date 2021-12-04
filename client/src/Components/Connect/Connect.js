@@ -53,6 +53,7 @@ export default function Connect() {
         placeholder="Pseudo"
         onChange={handleChange}
         name="pseudoConnect"
+        defaultValue="demo-user"
       />
       <div className="error pseudo"></div>
       <input
@@ -61,6 +62,7 @@ export default function Connect() {
         id="password"
         placeholder="Mot de passe"
         onChange={handleChange}
+        defaultValue="111111"
       />
       <div className="error password"></div>
       <button type="submit">Connection</button>

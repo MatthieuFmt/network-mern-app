@@ -37,7 +37,7 @@
     .commenters {
       @extend %flexBetween;
       flex-direction: column;
-      width: 20%;
+      width: 10%;
 
       img {
         width: 70px;
@@ -50,14 +50,15 @@
 
       .commenter-pseudo {
         color: $black1;
+        font-size: 12px;
       }
     }
 
     .commenter-text {
       color: $first3;
-      margin-left: 20px;
+      margin-top: 15px;
       font-size: 0.95rem;
-      width: 80%;
+      width: 85%;
     }
 
     .comment-date {

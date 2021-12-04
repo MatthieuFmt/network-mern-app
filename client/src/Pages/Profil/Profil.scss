@@ -193,12 +193,17 @@
           margin-top: 20px;
           @extend %flexBetween;
 
+          .commenter-pseudo {
+            white-space: nowrap;
+            width: 15%;
+          }
           .comment-time {
+            width: 85%;
             .commenter-text {
               background-color: $first1;
               width: fit-content;
               padding: 5px 10px;
-              border-radius: 50px;
+              border-radius: 5px;
             }
             .timestamp {
               font-size: 0.8rem;
