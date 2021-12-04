@@ -29,11 +29,15 @@ export default function LikeButton({ post }) {
   return (
     <>
       {liked ? (
-        <button onClick={() => unlike()} className="unlike">
+        <button
+          onClick={() => unlike()}
+          className="unlike"
+          aria-label="je n'aime pas"
+        >
           <i className="fas fa-heart"></i>
         </button>
       ) : (
-        <button onClick={like} className="like">
+        <button onClick={like} className="like" aria-label="j'aime">
           <i className="far fa-heart"></i>
         </button>
       )}

@@ -38,18 +38,23 @@ export default function Navbar() {
           <img src={logo} alt="logo" />
         </div>
         <ul>
-          <NavLink exact activeClassName="current" to="/profil">
-            <li>
+          <li>
+            <NavLink exact activeClassName="current" to="/profil">
               {userData.pseudo}
               <img src={userData.picture} alt="" />
-            </li>
-          </NavLink>
-          <NavLink exact activeClassName="current" to="/accueil">
-            <li className="middle">
+            </NavLink>
+          </li>
+          <li className="middle">
+            <NavLink
+              exact
+              activeClassName="current"
+              to="/accueil"
+              aria-label="accueil"
+            >
               <i className="fas fa-home"></i>
-            </li>
-          </NavLink>
-          <li className="deconnect" onClick={logOut}>
+            </NavLink>
+          </li>
+          <li className="deconnect" onClick={logOut} aria-label="déconnexion">
             <i className="fas fa-power-off"></i>
           </li>
         </ul>

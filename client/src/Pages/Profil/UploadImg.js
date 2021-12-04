@@ -26,11 +26,11 @@ export default function UploadImg({ userData }) {
   return (
     <form className="upload-picture" onSubmit={submitPicture}>
       {!isChanged ? (
-        <label htmlFor="file" className="change-img">
+        <label htmlFor="file" className="change-img" aria-label="image">
           <i className="far fa-image"></i>
         </label>
       ) : (
-        <button type="submit" className="change-img">
+        <button type="submit" className="change-img" aria-label="envoyer">
           <i className="fas fa-check"></i>
         </button>
       )}

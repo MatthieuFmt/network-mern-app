@@ -87,7 +87,11 @@ export default function Profil() {
                 <p onClick={toggleBio}>{userData.bio}</p>
               )}
 
-              <button type="submit" className="update-bio">
+              <button
+                type="submit"
+                className="update-bio"
+                aria-label="éditer / valider"
+              >
                 {bioActive ? (
                   <i className="fas fa-check"></i>
                 ) : (
@@ -217,10 +221,10 @@ export default function Profil() {
                       </ul>
 
                       <div className="opinions">
-                        <div className="likes">
+                        <div className="likes" aria-label="likes">
                           <i className="fas fa-heart"></i> {post.likers.length}
                         </div>
-                        <div className="comments">
+                        <div className="comments" aria-label="commentaires">
                           {post.comments.length}{" "}
                           <i className="fas fa-comment-alt"></i>
                         </div>

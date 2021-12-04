@@ -117,7 +117,11 @@ const Friend = () => {
       )}
       <h4>Vous connaissez peut-être</h4>
       {number && number > 6 && (
-        <button className="before-btn" onClick={() => handleSlot("prev")}>
+        <button
+          className="before-btn"
+          onClick={() => handleSlot("prev")}
+          aria-label="boutton gauche"
+        >
           <i className="fas fa-caret-square-left"></i>
         </button>
       )}
@@ -145,7 +149,11 @@ const Friend = () => {
         </ul>
       </div>
       {number && number > 6 && (
-        <button className="after-btn" onClick={() => handleSlot("next")}>
+        <button
+          className="after-btn"
+          onClick={() => handleSlot("next")}
+          aria-label="boutton droit"
+        >
           <i className="fas fa-caret-square-right"></i>
         </button>
       )}

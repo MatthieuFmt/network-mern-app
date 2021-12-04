@@ -28,7 +28,7 @@ export default function UpdatePost({ post, userData }) {
               defaultValue={post.message}
               onChange={(e) => setTextUpdate(e.target.value)}
             />
-            <button type="submit" className="update-btn">
+            <button type="submit" className="update-btn" aria-label="valider">
               <i className="fas fa-check-square"></i>
             </button>
           </form>
@@ -36,7 +36,11 @@ export default function UpdatePost({ post, userData }) {
       </div>
       {userData._id === post.posterId && (
         <div className="btns-edit-delete">
-          <button onClick={() => setIsUpdated(!isUpdated)} className="edit">
+          <button
+            onClick={() => setIsUpdated(!isUpdated)}
+            className="edit"
+            aria-label="éditer"
+          >
             <i className="far fa-edit"></i>
           </button>
           <button
@@ -46,6 +50,7 @@ export default function UpdatePost({ post, userData }) {
               }
             }}
             className="delete"
+            aria-label="supprimer"
           >
             <i className="far fa-trash-alt"></i>
           </button>

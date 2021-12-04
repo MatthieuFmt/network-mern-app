@@ -68,7 +68,7 @@ export default function Connect() {
         defaultValue="111111"
       />
       <div className="error password"></div>
-      <button type="submit">Connection</button>
+      <button type="submit">Connexion</button>
     </form>
   );
 }

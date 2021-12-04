@@ -83,7 +83,7 @@ export default function PostForm() {
         {isEmpty(video) && (
           <div className="picture">
             <span>
-              <i className="fas fa-camera"></i>
+              <i className="fas fa-camera" aria-label="image"></i>
             </span>
             <label htmlFor="file" className="media-label">
               Choisissez une image
@@ -103,7 +103,7 @@ export default function PostForm() {
         {isEmpty(postPicture) && (
           <div className="video">
             <span>
-              <i className="fas fa-video"></i>
+              <i className="fas fa-video" aria-label="vidéo"></i>
             </span>
             <input
               type="text"
@@ -139,7 +139,7 @@ export default function PostForm() {
             <iframe
               src={video}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              title={video}
+              title={"vidéo publication"}
               className="render-post-media video-post"
             />
           )}

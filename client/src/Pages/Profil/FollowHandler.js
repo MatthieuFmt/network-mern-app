@@ -33,13 +33,21 @@ export default function FollowHandler({ idToFollow, type }) {
       {isFollowed && !isEmpty(userData) && (
         <div className="follow-unfollow">
           {type === "suggestion" && (
-            <button onClick={handleUnfollow} className="unfollow">
+            <button
+              onClick={handleUnfollow}
+              className="unfollow"
+              aria-label="ne plus suivre"
+            >
               <i className="fas fa-window-close"></i>
             </button>
           )}
 
           {type === "card" && (
-            <button onClick={handleUnfollow} className="unfollow-card">
+            <button
+              onClick={handleUnfollow}
+              className="unfollow-card"
+              aria-label="ne plus suivre"
+            >
               <i className="fas fa-check-circle"></i>
             </button>
           )}
@@ -49,13 +57,21 @@ export default function FollowHandler({ idToFollow, type }) {
       {!isFollowed && !isEmpty(userData) && (
         <div className="follow-unfollow">
           {type === "suggestion" && (
-            <button onClick={handleFollow} className="follow">
+            <button
+              onClick={handleFollow}
+              className="follow"
+              aria-label="suivre"
+            >
               <i className="fas fa-user-plus"></i>
             </button>
           )}
 
           {type === "card" && (
-            <button onClick={handleFollow} className="follow-card">
+            <button
+              onClick={handleFollow}
+              className="follow-card"
+              aria-label="suivre"
+            >
               <i className="far fa-check-circle"></i>
             </button>
           )}

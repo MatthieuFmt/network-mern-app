@@ -39,7 +39,11 @@ const EditDeleteComment = ({ comment, postId }) => {
   return (
     <div className="edit-delete">
       {isAuthor && !edit && (
-        <button className="edit" onClick={() => setEdit(!edit)}>
+        <button
+          className="edit"
+          onClick={() => setEdit(!edit)}
+          aria-label="éditer"
+        >
           <i className="fas fa-pen"></i>
         </button>
       )}
@@ -51,7 +55,7 @@ const EditDeleteComment = ({ comment, postId }) => {
             defaultValue={comment.text}
             onChange={(e) => setText(e.target.value)}
           />
-          <button type="submit" className="btn-submit">
+          <button type="submit" className="btn-submit" aria-label="valider">
             <i className="fas fa-check"></i>
           </button>
           <button
@@ -61,6 +65,7 @@ const EditDeleteComment = ({ comment, postId }) => {
               }
             }}
             className="btn-delete"
+            aria-label="supprimer"
           >
             <i className="fas fa-trash-alt"></i>
           </button>

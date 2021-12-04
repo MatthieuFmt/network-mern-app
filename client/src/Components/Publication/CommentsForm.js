@@ -24,7 +24,7 @@ const CommentsForm = ({ post, userData }) => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button type="submit">
+      <button type="submit" aria-label="envoi commentaire">
         <i className="fas fa-paper-plane"></i>
       </button>
     </form>

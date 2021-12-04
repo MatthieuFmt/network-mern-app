@@ -40,7 +40,6 @@
     display: flex;
     margin: auto;
     overflow: hidden;
-    // height: 220px;
 
     ul {
       display: flex;
@@ -86,7 +85,7 @@
           margin: 0 2.5px;
           button {
             min-width: 100px;
-            // height: 150px;
+
             img {
               width: 70px;
               height: 70px;
@@ -128,7 +127,6 @@
             overflow-wrap: break-word;
             word-break: break-all;
             margin: 0;
-            // border: 1px solid $grey1;
           }
         }
       }
