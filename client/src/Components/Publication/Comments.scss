@@ -40,8 +40,8 @@
       width: 10%;
 
       img {
-        width: 70px;
-        height: 70px;
+        max-width: 70px;
+        max-height: 70px;
         border-radius: 20px;
 
         object-fit: cover;

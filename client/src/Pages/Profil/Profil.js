@@ -64,7 +64,7 @@ export default function Profil() {
       <main className="profil-container container">
         <section className="user">
           <div className="user-profil">
-            <img src={userData.picture} alt="utilisateur" />
+            <img src={userData.picture} alt="utilisateur" loading="lazy" />
             <UploadImg userData={userData} />
           </div>
 
@@ -127,7 +127,11 @@ export default function Profil() {
                       return (
                         <li key={user._id}>
                           <div className="users">
-                            <img src={user.picture} alt="utilisateur abonné" />
+                            <img
+                              src={user.picture}
+                              alt="utilisateur abonné"
+                              loading="lazy"
+                            />
                             <h4>{user.pseudo}</h4>
                           </div>
 
@@ -154,7 +158,11 @@ export default function Profil() {
                       return (
                         <li key={user._id}>
                           <div className="users">
-                            <img src={user.picture} alt="utilisateur abonné" />
+                            <img
+                              src={user.picture}
+                              alt="utilisateur abonné"
+                              loading="lazy"
+                            />
                             <h4>{user.pseudo}</h4>
                           </div>
 
@@ -184,12 +192,15 @@ export default function Profil() {
                   return (
                     <li className="post-card" key={post._id}>
                       <div className="top-card">
-                        {/* <p className="post-message">{post.message}</p> */}
                         <UpdatePost post={post} userData={userData} />
                       </div>
 
                       {post.picture && (
-                        <img src={post.picture} alt="publication" />
+                        <img
+                          src={post.picture}
+                          alt="publication"
+                          loading="lazy"
+                        />
                       )}
                       {post.video && (
                         <iframe
