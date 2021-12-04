@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function Connect() {
-  const [user, setUser] = useState({ pseudoConnect: "", passwordConnect: "" });
+  const [user, setUser] = useState({
+    pseudoConnect: "user-demo",
+    passwordConnect: "111111",
+  });
 
   const handleChange = (e) => {
     const { value, name } = e.target;
@@ -53,7 +56,7 @@ export default function Connect() {
         placeholder="Pseudo"
         onChange={handleChange}
         name="pseudoConnect"
-        defaultValue="demo-user"
+        defaultValue="user-demo"
       />
       <div className="error pseudo"></div>
       <input
