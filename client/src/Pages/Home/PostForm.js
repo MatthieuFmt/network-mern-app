@@ -31,7 +31,6 @@ export default function PostForm() {
       data.append("message", message);
       if (file) data.append("file", file);
       data.append("video", video);
-      console.log(data);
 
       await dispatch(addPost(data));
       dispatch(getPosts());

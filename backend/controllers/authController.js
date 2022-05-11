@@ -16,14 +16,10 @@ export const signUp = async (req, res) => {
   try {
     const user = await UserModel.create({ pseudo, password });
 
-    //
     const userLog = await UserModel.login(pseudo, password);
     const token = createToken(user._id);
     res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge });
     res.status(201).send({ user: user._id });
-
-    //
-    // res.status(201).send({ user: user._id });
   } catch (err) {
     const errors = signUpErrors(err);
 

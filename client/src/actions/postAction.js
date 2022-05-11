@@ -32,7 +32,6 @@ export const getPosts = (num) => {
 export const addPost = (data) => {
   return (dispatch) => {
     return axios.post(`/posts`, data).then((res) => {
-      console.log("ok");
       if (res.data.maxSize !== "") {
         dispatch({ type: GET_POST_ERRORS, payload: res.data.maxSize });
       } else if (res.data.format !== "") {
